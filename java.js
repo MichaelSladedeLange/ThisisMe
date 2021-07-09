@@ -1,6 +1,10 @@
+
+
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
+
+
 
 document.getElementById("outer").style.display = "none";
 

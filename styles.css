@@ -24,7 +24,174 @@ a { color: inherit;
  }
 
 
+.viewmobile{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -100;
+  height: 100vh;
+  width:100vw;
+  background-color: #1A1E1F;
+  opacity: 0;
 
+}
+
+
+.containter{
+  background-color: #1A1E1F;
+  display: flex;
+  opacity: 0.5;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.spinner_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.round{
+  position: relative;
+  border: 1px solid #ffffffa5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head{
+  color:white;
+  font-family: 'Comfortaa', cursive;
+  font-size: 3rem;
+  text-align: center;
+
+}
+
+.ring_5{
+  width: 500px;
+  height: 500px;
+  animation: spin 10s linear 0.5s infinite;
+}
+.ring_4{
+  width: 400px;
+  height: 400px;
+  animation: spin 10s linear 0.5s infinite;
+}
+.ring_3{
+  width: 300px;
+  height: 300px;
+  animation: spin 20s linear 0.5s infinite;
+}
+.ring_2{
+  width: 200px;
+  height: 200px;
+  animation: spin 20s linear 0.5s infinite;
+}
+.ring_1{
+  width: 100px;
+  height: 100px;
+  animation: spin 20s linear 0.5s infinite;
+}
+.planet{
+  position: absolute;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3ff9dc;
+}
+.suborbit{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    top: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #ffffffa5;
+    animation: spin 5s linear 1s infinite;
+}
+
+.subcenter{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3ff9dc;
+  top:30%;
+  right:30%;
+}
+
+.subplanet{
+  position: absolute;
+  top:-5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.sp_1{
+    background-color: #487e95;
+}
+
+.scp_1{
+  background-color: #91684a;
+}
+
+.no_5{
+
+}
+.no_4{
+  background-color: #ffcc29;
+}
+.no_3{
+  background-color: #f1aa9b;
+}
+.no_2{
+  background-color: #e8eae6;
+}
+.center{
+  top:22%;
+  height: 60px;
+  width: 60px;
+  background-color: #fdffbc;
+  animation: sun 2s linear infinite alternate;
+
+}
+
+@keyframes spin{
+  from{transform: rotate(0);}
+  to{transform: rotate(360deg);}
+}
+
+@keyframes sun {
+  from{  background-color: #fdffbc; }
+  to{background-color: #ef4f4f;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 990px){
+.viewmobile{
+  opacity: 1;
+  z-index: 101;
+}
+
+}
 
 .visible{
   opacity: 0;
@@ -57,8 +224,19 @@ a { color: inherit;
   height: 100vh;
   z-index: 90;
   width: 100vw;
+  opacity: 0;
   background-color: #1A1E1F;
+  animation: fadeinmenu 0.4s linear forwards;
 }
+@keyframes fadeinmenu {
+  0%{transform: translate(100%);}
+  1%{opacity: 1;}
+  2%{transform: translate(100%);}
+  100%{transform: translate(0,0);opacity: 1;}
+
+}
+
+
 
 .selectitem{
   color: #C9D6DF;
