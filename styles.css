@@ -38,6 +38,23 @@ a { color: inherit;
 }
 
 
+.roundbutton{
+  height: 50px;
+  width:50px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: white;
+  border-width: 0.5px;
+  opacity: 0.5;
+  animation: flash 1s ease-in-out infinite alternate;
+}
+
+@keyframes flash {
+  from{background-color: none;}
+  to{background-color: white;}
+}
+
+
 .containter{
   background-color: #1A1E1F;
   display: flex;
